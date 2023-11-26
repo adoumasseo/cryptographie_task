@@ -9,8 +9,8 @@ Ce projet en langage C propose une implémentation du chiffrement de César. Il 
 **cesar_decode.c:** Contient la fonction `decode` pour le décodage du message et une fonction `main` pour l'interaction avec l'utilisateur.<br>
 ## Compilation
 
-- Pour compiler le programme d'encodage, utilisez la commande : `gcc cesar_encode.c  encode_alpha.c -o a`; Un exécutable a est produit et quand on le lance on peut essager le programme
-- Pour compiler le programme de décodage, utilisez la commande : `gcc cesar_decode.c  encode_alpha.c -o b`; Un exécutable a est produit et quand on le lance on peut essager le programme
+- Pour compiler le programme d'encodage, utilisez la commande : `gcc cesar_encode.c  encode_alpha.c -o a`; Un exécutable a est produit et quand on le lance on peut essayer le programme
+- Pour compiler le programme de décodage, utilisez la commande : `gcc cesar_decode.c  encode_alpha.c -o b`; Un exécutable a est produit et quand on le lance on peut essayer le programme
 ## Utilisation
 
 **Encodage :**
