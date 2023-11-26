@@ -1,15 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
-    char maChaine[100];  // Déclaration d'un tableau de caractères pour stocker la chaîne
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
 
-    printf("Entrez une chaîne de caractères : ");
-    
-    // Utilisation de fgets pour récupérer la chaîne
-    fgets(maChaine, sizeof(maChaine), stdin);
+    printf("Saisissez une ligne : ");
+    read = getline(&line, &len, stdin);
 
-    // Affichage de la chaîne
-    printf("Vous avez saisi : %s", maChaine);
+    if (read != -1) {
+        printf("Vous avez saisi : %s", line);
+    } else {
+        printf("Erreur lors de la lecture de la ligne.\n");
+    }
+
+    free(line);  // N'oubliez pas de libérer la mémoire allouée par getline.
 
     return 0;
 }

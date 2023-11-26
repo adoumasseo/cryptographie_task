@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
  * encode - a function that encript a message using Cesar's algorithm
@@ -19,16 +16,10 @@ char *encode(unsigned int gap, char *_str, char *alphabet)
 	unsigned int i = 0, j = 0;
 
 	newstr = malloc(sizeof(char) * strlen(_str) + 1);
-	encode = malloc(sizeof(char) * 26);
+	encode = encode_alpha(gap, alphabet);
 
 	if (newstr == NULL || encode == NULL)
 		return (NULL);
-	while (i < 26)
-	{
-		encode[i] = alphabet[(i + gap) % 26];
-		i++;
-	}
-	i = 0;
 	while (i < strlen(_str))
 	{
 		if (!isalpha(_str[i]))
@@ -43,12 +34,17 @@ char *encode(unsigned int gap, char *_str, char *alphabet)
 					newstr[i] = encode[j];
 					break;
 				}
+				if (tolower(_str[i]) == alphabet[j])
+				{
+					newstr[i] = toupper(encode[j]);
+					break;
+				}
 				j++;	
 			}
 		}
 		i++;
 	}
-	newstr[i + 1] = '\0';
+	newstr[i] = '\0';
 	free(encode);
 	return (newstr);
 
@@ -62,35 +58,24 @@ char *encode(unsigned int gap, char *_str, char *alphabet)
 
 void main(void)
 {
-	unsigned int gap, size;
-	char *str;
+	unsigned int gap;
+	size_t size = 0;
+	char *str = NULL;
 	char *new;
 	
 	printf("Entrez une valeur comprise entre 0 et 25 : ");
 	scanf("%u", &gap);
-
-	printf("Entrez maintenant La taille de votre chaine de caractère : ");
-	scanf("%u", &size);
-
-	if (gap < 0 || size < 0)
+	getchar();
+	if (gap > 25)
 	{
 		printf("Entrez une valeur comprise entre 0 et 25\n");
 		return;
 	}
-	str = malloc(sizeof(char) * size);
-	if (str == NULL)
-	{
-		printf("Error");
-		return;
-	}
-	getchar();
-	printf("Entrez votre chaine : ");
-	fgets(str, size, stdin);
+	printf("Entrez la chaine à crypter : ");
+	size = getline(&str, &size, stdin);
 	str[strcspn(str, "\n")] = '\0';
 	new = encode(gap, str, "abcdefghijklmnopqrstuvwxyz");
 	printf("votre nouvelle chaine est : %s\n", new );
-
-
 
 	free(str);
 	free(new);
