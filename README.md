@@ -58,3 +58,15 @@ Une fois l'executable que le programme est lancé l'utilisateur est questioné s
 ![Affine](https://github.com/adoumasseo/cryptographie_task/blob/master/img/Affine_Show.png)
 ##### Explication
 Le principe est pareil que dans l'algorithme de César à la différence que ici la formule est un peu différente et `a` et `26` doivent être premier entre eux.La fonction `is_prime_number` se charge de faire cette verification et une variante de la fonction `encode_alpha` se charge de produire l'alphabet de substitution.
+
+### Chiffrement de Viginère
+#### Compilation 
+
+- Pour compiler le programme affine utilisez la commande : `gcc viginère.c -o d`; Un exécutable `a` est produit et quand on le lance on peut essayer le programme.
+#### Utilisation 
+
+Une fois l'executable que le programme est lancé l'utilisateur est questioné sur la chaine de caractère qu'il souhaite encoder et sur laclé qu'il souhaite utiliser.
+A partir de ce moment les fonctions `vigenereEncrypt` et `vigenereDecrypt` produiront respectivement la version crypté du message et aussi la version décrypté.
+
+##### Exemple
+![Viginère](https://github.com/adoumasseo/cryptographie_task/blob/master/img/Viging%C3%A8re_show.png)
