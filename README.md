@@ -4,14 +4,14 @@ Ce projet en langage C propose une implémentation du chiffrement de César. Il 
 
 ## Contenu du Répertoire
 
-**main.h:** Fichier d'en-tête contenant les prototypes de toutes les fonctions utilisées dans le projet.<br>
-**encode_alpha.c:** Contient la fonction `encode_alpha` qui génère l'alphabet décalé.<br>
-**cesar_encode.c:** Contient la fonction `encode` pour l'encodage du message et une fonction `main` pour l'interaction avec l'utilisateur.<br>
-**cesar_decode.c:** Contient la fonction `decode` pour le décodage du message et une fonction `main` pour l'interaction avec l'utilisateur.<br>
-**_affine.c:** Contient la fonction `affine` pour l'encodage du message en utilisant le chifrement affine et une fonction `main` pour l'interaction avec l'utilisateur.<br>
-**_affine.c:** Contient la fonction `affine_decode` pour le decodage du message en utilisant le chifrement affine.<br>
-**is_prime_number.c:** Contient la fonction `is_prime_number` pour verifier si un entier est premier avec 26.<br>
-**viginère.c:** Contient les fonctions `vigenereEncrypt` et `vigenereDecrypt` pour crypter et décripter un message utilisant l'agorithme de viginère.<br>
+- **main.h:** Fichier d'en-tête contenant les prototypes de toutes les fonctions utilisées dans le projet.<br>
+- **encode_alpha.c:** Contient la fonction `encode_alpha` qui génère l'alphabet décalé.<br>
+- **cesar_encode.c:** Contient la fonction `encode` pour l'encodage du message et une fonction `main` pour l'interaction avec l'utilisateur.<br>
+- **cesar_decode.c:** Contient la fonction `decode` pour le décodage du message et une fonction `main` pour l'interaction avec l'utilisateur.<br>
+- **_affine.c:** Contient la fonction `affine` pour l'encodage du message en utilisant le chifrement affine et une fonction `main` pour l'interaction avec l'utilisateur.<br>
+- **_affine.c:** Contient la fonction `affine_decode` pour le decodage du message en utilisant le chifrement affine.<br>
+- **is_prime_number.c:** Contient la fonction `is_prime_number` pour verifier si un entier est premier avec 26.<br>
+- **viginère.c:** Contient les fonctions `vigenereEncrypt` et `vigenereDecrypt` pour crypter et décripter un message utilisant l'agorithme de viginère.<br>
 
 ## Description des fonctions
 
