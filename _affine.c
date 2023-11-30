@@ -70,7 +70,7 @@ void main(void)
 	
 	do
 	{
-		printf("Entrez la valeur de a; a doit etre premier avec 26 : ");
+		printf("Entrez la valeur de a. Il doit etre premier avec 26 : ");
 		scanf("%d", &a);
 	} while (is_prime_number(a) == 0);
 	
