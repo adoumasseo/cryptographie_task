@@ -37,3 +37,7 @@ Une fois l'executable que le programme est lancé l'utilisateur est questioné s
  - Le programme affichera le message décodé.
 ##### Exemple
 ![decodage](https://github.com/adoumasseo/cryptographie_task/blob/master/img/Cesar_decode_show.png)
+
+#### Explication
+Les deux fonctions d'encodage et de décodage se basent sur la gestion des chaines des caractères. La fonction encode_alpha recoit en argument un alphabet normal et le decalage entré par l'utilisateur. Avec ces deux donnés elles crée et renvoie l'alphabet de substition de l'alphabet normal à l'aide le formule `y = (x + a)mod(26)` avec `x` l'index d'un élément de l'alphabet normal, `y` son correspond dans l'alphabet de substitution et `a` le decalage.
+L'alphabet de substitution est ensuite utilisé par les fonctions d'encodage et de décodage pour changer les éléments de la chaine de caractère de l'utilisateur. <br>
